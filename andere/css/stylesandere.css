@@ -1,7 +1,26 @@
+
+h2  {
+    margin-top: 10pt;
+    padding-left: 40%;
+    font-size: 22pt;
+
+}
+
+header  {
+    background-color: darkorange;
+    padding-bottom: 10pt;
+}
+
+body    {
+    background-color: brown;
+}
+
+
+
 /*hamburgersymbol*/
 nav {
     margin-top: -27px;
-    margin-left: -20px;
+    margin-left: -5px;
 }
 
     a
@@ -22,7 +41,7 @@ nav {
         display: block;
         position: relative;
         top: 50px;
-        left: 50px;
+        left: 8px;
   
         z-index: 1;
   
@@ -33,11 +52,11 @@ nav {
     #menuToggle input
     {
         display: block;
-        width: 40px;
+        width: 30px;
         height: 32px;
         position: absolute;
         top: -7px;
-        left: -5px;
+        left: -10px;
   
         cursor: pointer;
   

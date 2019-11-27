@@ -9,15 +9,16 @@ body    {
 
 
 }
-header  {
-    background-color: darkorange;
+h1  {
+    margin-top: 10pt;
+    padding-left: 40%;
     font-size: 22pt;
-    
+
 }
 
-h1{
-    padding: 20pt;
-    padding-left: 25%;
+header  {
+    background-color: darkorange;
+    padding-bottom: 10pt;
 }
 
 .linie1{
@@ -39,6 +40,7 @@ h1{
     border:black;
     height:5px;
   }
+
 
 
 

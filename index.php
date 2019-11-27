@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Blogs</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styleshaupt.css">
 </head>
 <body>
 <header>
@@ -19,9 +19,9 @@
               <span></span>
               
               <ul id="menu">
-                <a href="http://localhost/Blog/index/"><li>Home</li></a>
+                <a href="http://localhost/blog/"><li>Home</li></a>
                 <a href="http://localhost/Blog/schreiben/schreiben.php"><li>Blogs schreiben</li></a>
-                <a href="http://localhost/Blog/%c3%bcber%20uns/uberuns.php"><li>Über den Inhaber</li></a>
+                <a href="http://localhost/Blog/andere/andere.php"><li>Die anderen Blogs</li></a>
               </ul>
             </div>
         </nav>
@@ -61,10 +61,7 @@
         
     ?>
 
-        <div id="links-kollegen">
-        <ul>
-            <li><a href="http://10.20.18.107:8888/" target="_blank">Moritz' Blog</a></li>
-        </ul>
+        
 
 </body>
 </html>
