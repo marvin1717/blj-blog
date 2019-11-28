@@ -54,7 +54,7 @@
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($created_by === '') {
-          echo  ""
+          $errors[] = 'Bitte geben Sie einen Namen ein.';
     }
 
     if ($post_title === '') {
