@@ -15,6 +15,26 @@ body    {
 }
 
 
+/*textfelder*/
+
+.container {
+    border-color: black;
+    border-style: solid;
+    padding-left: 33%;
+    padding-right: 30%;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    color: darkslategray;
+    
+
+}
+
+.blogbutton {
+    border-color: grey;
+    color: darkslategray;
+    background-color: orange;
+}
+
+
 /*hamburgersymbol*/
 nav {
     margin-top: -27px;

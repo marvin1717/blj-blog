@@ -8,31 +8,31 @@
     <link rel="stylesheet" href="css/styleshaupt.css">
 </head>
 <body>
-<header>
-        <nav id="hamburger" name="navigation">
-            <div id="menuToggle">
+    <header>
+            <nav id="hamburger" name="navigation">
+                <div id="menuToggle">
               
-              <input type="checkbox" />
+                    <input type="checkbox" />
               
-              <span></span>
-              <span></span>
-              <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
               
-              <ul id="menu">
-                <a href="http://10.20.18.104/Blog/"><li>Home</li></a>
-                <a href="http://10.20.18.104/Blog/schreiben/schreiben.php"><li>Blogs schreiben</li></a>
-                <a href="http://10.20.18.104/Blog/andere/andere.php"><li>Die anderen Blogs</li></a>
-              </ul>
-            </div>
-        </nav>
-    <h1>Willkommen bei meinem Blog</h1>
-</header>    
+                    <ul id="menu">
+                        <a href="http://10.20.18.104/Blog/"><li>Home</li></a>
+                        <a href="http://10.20.18.104/Blog/schreiben/schreiben.php"><li>Blogs schreiben</li></a>
+                        <a href="http://10.20.18.104/Blog/andere/andere.php"><li>Die anderen Blogs</li></a>
+                    </ul>
+                </div>
+            </nav>
+        <h1>Willkommen bei meinem Blog</h1>
+    </header>    
 <div id="container">
       
         
         <p class="willkommen"> Willkommen auf meiner Blogwebsite. <br>
-            Auf der linken Seite kannst du deinen eigenen Blog verfassen.<br>
-            Auf der rechten Seite sind weitere Blogs von anderen Leuten.<br>
+            Auf der Startseite können sie die bereits verfassten Blogs lesen.<br>
+            Über das Hamburgersymbol finden sie meine Freunde und können eigene Blogs verfassen.<br>
             <hr class = "linie1">
         </p>
    

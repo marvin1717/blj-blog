@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>schreiben</title>
     <link rel="stylesheet" href="css/stylesschreiben.css">
+    <link rel="friends" href="">
 </head>
 <body>
   <header>
@@ -26,16 +27,18 @@
       </nav>
       <h2>Hier könnte ihre Werbung stehen</h2>
   </header>
+      
+<div class = "container">
 
   <form action="schreiben.php" method="post">
     <!--Eingabe-->
-    <label for="name">Dein Name</label>
+    <label for="name">Dein Name</label><br>
     <input name="name" type="text" id="name"><br>
-    <label for="title">Titel</label>
+    <label for="title">Titel</label><br>
     <input name="title" type="text" id="title"><br>
-    <label for="text"></label>
-    <input name="text" type="textarea" id="text"><br>
-    <input type="submit" value="Blog teilen">
+    <label for="text"></label><br>
+    <textarea name="text" cols="55%%" rows="12%"></textarea> <br>	
+    <input class="blogbutton" type="submit" value="Blog teilen">
   </form>  
 
   <!--Datenbankverbindung-->
@@ -57,7 +60,7 @@
           $errors[] = 'Bitte geben Sie einen Namen ein.';
     }
 
-    if ($post_title === '') {
+    if ($post_title === '' ) {
           $errors[] = 'Bitte wählen sie einen Titel aus.';
     } 
 
@@ -73,10 +76,21 @@
           
       $stmt = $db->prepare("insert into posts (created_by, post_text, post_title) VALUES(:createdBy, :postText, :postTitle) ");
       $stmt->execute([':createdBy' => $created_by, ':postText' => $post_text, ':postTitle' => $post_title]); 
+     
     }
   }  
+    
   ?>
+
+      &amp;
+      &lt;
+      &gt;
+      &quot;
+      &#x27;     
+      &#x2F;
+      
 
 </body>
 </html>
+
 

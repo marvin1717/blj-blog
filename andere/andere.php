@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>über uns</title>
+    <title>die anderen Blogs</title>
     <link rel="stylesheet" href="css/stylesandere.css">
+    
 </head>
 <body>
   <header>
@@ -30,18 +31,25 @@
   <div id = "container">
 
       <div id="links-kollegen">
-        <ul>
-            <li class = "kollegen" ><a href="http://10.20.18.106/" target="_blank">Moritzs Blog</a></li>
-            <li class = "kollegen" ><a href="http://10.20.18.113/" target="_blank">Joshuas Blog</a></li>
-            <li class = "kollegen" ><a href="http://10.20.18.111/" target="_blank">Nicolas Blog</a></li>
-            <li class = "kollegen" ><a href="http://10.20.18.108/" target="_blank">Davides Blog</a></li>
-            <li class = "kollegen" ><a href="http://10.20.18.110/" target="_blank">Lucas Blog</a></li>
-            <li class = "kollegen" ><a href="http://10.20.18.109/" target="_blank">Alessios Blog</a></li>
-            <li class = "kollegen" ><a href="http://10.20.18.112/" target="_blank">Erins Blog</a></li>
-            <li class = "kollegen" ><a href="http://10.20.18.107/blog_projekt/" target="_blank">Darvins Blog</a></li>
-        </ul>
+        <?php
+            $user="d041e_gibucher";
+            $pass="54321_Db!!!";
 
-    
+            $pdo = new PDO('mysql:host=10.20.18.122;dbname=d041e_gibucher', $user, $pass, [
+              PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+              PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
+          ]);
+            
+            
+            $stmt = $pdo->query('SELECT * FROM `ipadressen`');
+            foreach($stmt->fetchAll() as $ipadressen) {
+              
+              echo '<li><a href="http://'. $ipadressen ['Ip']. '" >' . $ipadressen ['vorname']  .'</a></li>' ;
+            }
 
+            
+
+        ?>    
+  
 </body>
 </html>
