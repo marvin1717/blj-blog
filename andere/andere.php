@@ -29,8 +29,6 @@
     <h2>Die Blogs meiner Kollegen</h2>
   </header>
   <div id = "container">
-
-      <div id="links-kollegen">
         <?php
             $user="d041e_gibucher";
             $pass="54321_Db!!!";
@@ -43,13 +41,19 @@
             
             $stmt = $pdo->query('SELECT * FROM `ipadressen`');
             foreach($stmt->fetchAll() as $ipadressen) {
-              
-              echo '<li><a href="http://'. $ipadressen ['Ip']. '" >' . $ipadressen ['vorname']  .'</a></li>' ;
+              echo '<div class="links-kollegen">';
+                echo '<li><a href="http://'. $ipadressen ['Ip']. '" >' . $ipadressen ['vorname']  .'</a></li>' ;
+              echo '</div>';
             }
+            ?>
+            
+            
+  </div>          
+          
 
             
 
-        ?>    
+           
   
 </body>
 </html>

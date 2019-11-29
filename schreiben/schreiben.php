@@ -36,9 +36,12 @@
     <input name="name" type="text" id="name"><br>
     <label for="title">Titel</label><br>
     <input name="title" type="text" id="title"><br>
+    <label for="url">Bild</label><br>
+    <textarea htmlentities type="text" id="post_url" name="post_url"></textarea>
     <label for="text"></label><br>
     <textarea name="text" cols="55%%" rows="12%"></textarea> <br>	
     <input class="blogbutton" type="submit" value="Blog teilen">
+    
   </form>  
 
   <!--Datenbankverbindung-->
@@ -52,6 +55,7 @@
   $created_by   = trim($_POST['name'] ?? '');
   $post_title   = trim($_POST['title'] ?? '');
   $post_text    = trim($_POST['text'] ?? '');
+  $bild         = trim($_POST['post_url'] ?? '');
 
 
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -67,6 +71,9 @@
     if ($post_text === '') {
           $errors[] = 'Schreiben sie doch etwas aus ihrem Leben.';
     } 
+    if ($bild === '') {
+      $errors[] = 'Fügen sie ein Bild ein.';
+} 
 
     if (count($errors) === 0) {
       $formSent = true;
@@ -74,8 +81,10 @@
       $db = new PDO('mysql:host=localhost;dbname=blog', $user, $pass );
       $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
           
-      $stmt = $db->prepare("insert into posts (created_by, post_text, post_title) VALUES(:createdBy, :postText, :postTitle) ");
-      $stmt->execute([':createdBy' => $created_by, ':postText' => $post_text, ':postTitle' => $post_title]); 
+      $stmt = $db->prepare("insert into posts (created_by, post_text, post_title, bildurl) VALUES(:createdBy, :postText, :postTitle, :bildUrl,) ");
+      $stmt->execute([':createdBy' => $created_by, ':postText' => $post_text, ':postTitle' => $post_title, ':bildUrl' => $bild,]); 
+    
+    
      
     }
   }  

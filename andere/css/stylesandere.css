@@ -15,10 +15,10 @@ body    {
     background-color: burlywood;
 }
 
-.kollegen   {
+.links-kollegen {
     border-color: black;
-    border: black;
-    bord
+    border-width: 2pt;
+    color: blue;
 }
 
 

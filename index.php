@@ -52,14 +52,15 @@
         echo 'Am ' . $blogpart ['created_at'] . ' hat ' . $blogpart ['created_by'] . ' gepostet:';
             echo '<div class = aussage>';
         echo '<h2>' . $blogpart['post_title'] . '</h2>';
-        
+        echo "<img scr=$blogpart ",'bildurl',">";
             echo    $blogpart['post_text'];
             echo    '<hr class = "linie">';
         echo '</div>';
-        }
+        } ?>
+
         
         
-    ?>
+   
 
         
 
