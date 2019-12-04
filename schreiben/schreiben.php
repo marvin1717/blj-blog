@@ -19,9 +19,9 @@
           <span></span>
           
           <ul id="menu">
-            <a href="http://10.20.18.104/Blog/"><li>Home</li></a>
-            <a href="http://10.20.18.104/Blog/schreiben/schreiben.php"><li>Blogs schreiben</li></a>
-            <a href="http://10.20.18.104/Blog/andere/andere.php"><li>Die anderen Blogs</li></a>
+            <a href="http://10.20.18.105/Blog/"><li>Home</li></a>
+            <a href="http://10.20.18.105/Blog/schreiben/schreiben.php"><li>Blogs schreiben</li></a>
+            <a href="http://10.20.18.105/Blog/andere/andere.php"><li>Die anderen Blogs</li></a>
           </ul>
         </div>
       </nav>
@@ -36,8 +36,8 @@
     <input name="name" type="text" id="name"><br>
     <label for="title">Titel</label><br>
     <input name="title" type="text" id="title"><br>
-    <label for="url">Bild</label><br>
-    <textarea htmlentities type="text" id="post_url" name="post_url"></textarea>
+    <label for="post_url">Bild</label><br>
+    <input name="post_url" type="text" id="post_url"></input>
     <label for="text"></label><br>
     <textarea name="text" cols="55%%" rows="12%"></textarea> <br>	
     <input class="blogbutton" type="submit" value="Blog teilen">
@@ -61,18 +61,18 @@
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($created_by === '') {
-          $errors[] = 'Bitte geben Sie einen Namen ein.';
+      echo $errors[] = 'Bitte geben Sie einen Namen ein.<br>';
     }
 
     if ($post_title === '' ) {
-          $errors[] = 'Bitte wählen sie einen Titel aus.';
+      echo $errors[] = 'Bitte wählen sie einen Titel aus.<br>';
     } 
 
     if ($post_text === '') {
-          $errors[] = 'Schreiben sie doch etwas aus ihrem Leben.';
+      echo $errors[] = 'Schreiben sie doch etwas aus ihrem Leben.<br>';
     } 
     if ($bild === '') {
-      $errors[] = 'Fügen sie ein Bild ein.';
+      echo $errors[] = 'Schreiben sie doch etwas aus ihrem Leben.<br>';
 } 
 
     if (count($errors) === 0) {
@@ -81,22 +81,16 @@
       $db = new PDO('mysql:host=localhost;dbname=blog', $user, $pass );
       $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
           
-      $stmt = $db->prepare("insert into posts (created_by, post_text, post_title, bildurl) VALUES(:createdBy, :postText, :postTitle, :bildUrl,) ");
-      $stmt->execute([':createdBy' => $created_by, ':postText' => $post_text, ':postTitle' => $post_title, ':bildUrl' => $bild,]); 
-    
-    
+      $stmt = $db->prepare("insert into posts (created_by, post_text, post_title, bildurl) VALUES(:createdBy, :postText, :postTitle, :picture) ");
+      $stmt->execute([':createdBy' => $created_by, ':postText' => $post_text, ':postTitle' => $post_title, ':picture' => $bild,]); 
      
-    }
+      } 
+    
+    
   }  
     
   ?>
 
-      &amp;
-      &lt;
-      &gt;
-      &quot;
-      &#x27;     
-      &#x2F;
       
 
 </body>

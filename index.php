@@ -19,9 +19,9 @@
                         <span></span>
               
                     <ul id="menu">
-                        <a href="http://10.20.18.104/Blog/"><li>Home</li></a>
-                        <a href="http://10.20.18.104/Blog/schreiben/schreiben.php"><li>Blogs schreiben</li></a>
-                        <a href="http://10.20.18.104/Blog/andere/andere.php"><li>Die anderen Blogs</li></a>
+                        <a href="http://10.20.18.105/Blog/"><li>Home</li></a>
+                        <a href="http://10.20.18.105/Blog/schreiben/schreiben.php"><li>Blogs schreiben</li></a>
+                        <a href="http://10.20.18.105/Blog/andere/andere.php"><li>Die anderen Blogs</li></a>
                     </ul>
                 </div>
             </nav>
@@ -45,18 +45,24 @@
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
         ]);
 
-        $stmt = $pdo->query('SELECT * FROM `posts`');
+        $stmt = $pdo->query('SELECT * FROM posts ORDER BY ID DESC');
         $fullblog = $stmt->fetchAll();
         foreach($fullblog as $blogpart) {
         echo '<div class = "post">';
         echo 'Am ' . $blogpart ['created_at'] . ' hat ' . $blogpart ['created_by'] . ' gepostet:';
             echo '<div class = aussage>';
-        echo '<h2>' . $blogpart['post_title'] . '</h2>';
-        echo "<img scr=$blogpart ",'bildurl',">";
+            echo '<h2>' . $blogpart['post_title'] . '</h2>';
+            echo '<img src ='  . $blogpart['bildurl'] . '> <br>' ;
             echo    $blogpart['post_text'];
             echo    '<hr class = "linie">';
+            
         echo '</div>';
-        } ?>
+        
+
+        
+        } 
+        
+        ?>
 
         
         

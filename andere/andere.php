@@ -20,9 +20,9 @@
               <span></span>
               
               <ul id="menu">
-                <a href="http://10.20.18.104/Blog/"><li>Home</li></a>
-                <a href="http://10.20.18.104/Blog/schreiben/schreiben.php"><li>Blogs schreiben</li></a>
-                <a href="http://10.20.18.104/Blog/andere/andere.php"><li>Die anderen Blogs</li></a>
+                <a href="http://10.20.18.105/Blog/"><li>Home</li></a>
+                <a href="http://10.20.18.105/Blog/schreiben/schreiben.php"><li>Blogs schreiben</li></a>
+                <a href="http://10.20.18.105/Blog/andere/andere.php"><li>Die anderen Blogs</li></a>
               </ul>
          </div>
       </nav>
