@@ -52,10 +52,10 @@
   $user = 'root';
   $pass ='';
 
-  $created_by   = trim($_POST['name'] ?? '');
-  $post_title   = trim($_POST['title'] ?? '');
-  $post_text    = trim($_POST['text'] ?? '');
-  $bild         = trim($_POST['post_url'] ?? '');
+  $created_by   = htmlentities($_POST['name'] ?? '');
+  $post_title   = htmlentities($_POST['title'] ?? '');
+  $post_text    = htmlentities($_POST['text'] ?? '');
+  $bild         = htmlentities($_POST['post_url'] ?? '');
 
 
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -71,9 +71,7 @@
     if ($post_text === '') {
       echo $errors[] = 'Schreiben sie doch etwas aus ihrem Leben.<br>';
     } 
-    if ($bild === '') {
-      echo $errors[] = 'Schreiben sie doch etwas aus ihrem Leben.<br>';
-} 
+     
 
     if (count($errors) === 0) {
       $formSent = true;
